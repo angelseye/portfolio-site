@@ -31,5 +31,14 @@ module Portfolio
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+
+    #-- GENERATORS ----------
+    config.generators do |g|
+      g.test_framework = :rspec
+    end
+
+    #-- SASS ----------
+    config.sass.preferred_syntax = :scss
   end
 end
